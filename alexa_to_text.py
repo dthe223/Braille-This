@@ -31,7 +31,7 @@ def get_text(response): # Gets the user's message, passes it into the another pr
             return statement(render_template('correct'))
         else:
             user_resp = ""
-            return question(render_template('wrong'))
+            return question(render_template('reprompt'))
 
 if __name__ == '__main__':
      app.run(debug=False)

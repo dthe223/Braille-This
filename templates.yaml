@@ -1,4 +1,4 @@
-prompt: Please leave a message after the tone. Beeeeeep.
+prompt: Please leave a message after the tone. Beeeeeeep.
 reprompt: Try again. Beeeeeep.
 confirmStatement: You said {{response}}. Is this right?
 correct: Processing to braille.
