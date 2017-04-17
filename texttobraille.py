@@ -1,27 +1,13 @@
 """
-Design Prolog 
-Author:Karthik Nayak
-Date: 28th Feb 2017
-Purpose: to ask the user for xxxxxxx and,
-use it to generate xxxxxxx
-
-Preconditions:  xxxxxxxxxxx
-
-Postconditions:  xxxxxxxxxx
+Author:Karthik Nayak, Jacob Pawlak
+Date: April 15th, 2017
 """
 
 from flask import Flask, render_template
 from flask_ask import Ask, statement, question, session
 
-
-
-   
-
-
-
 def main():
-        
-        
+      
         alexa_file  = open("alexa_output.txt", "r")
         
         input_text = alexa_file.read() 
@@ -32,9 +18,7 @@ def main():
         output = "";
         
         position = [0, 0, 0]
-        
-                 
-        
+               
         for x in range(0, len(input_text)):
                 text_file.write("translate(" + str(position) + ")\n")
         
@@ -47,10 +31,7 @@ def main():
                 if input_text[x] == ' ':       
                         output = text_file.write("import(\"braille_bricks_" + "space.stl\"" + ", convexity=3);\n")                          
                 else:
-                        output = text_file.write("import(\"braille_bricks_" + input_text[x].upper() + ".stl\", convexity=3);\n")         
-            
-                
-    
+                        output = text_file.write("import(\"braille_bricks_" + input_text[x].upper() + ".stl\", convexity=3);\n")             
         
         text_file.close()     
     
